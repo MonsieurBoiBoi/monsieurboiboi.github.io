@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="locomotive-scroll.css">
+    <script src="https://cdn.jsdelivr.net/gh/locomotivemtl/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
     <title>Monsieur BoiBoi</title>
 </head>
-<body>
+<body data-scroll-container>
     <section>
         <div class="wrapper--img">
             <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="img">
@@ -39,10 +41,16 @@
         <div class="wrapper--img">
             <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="img">
         </div>
-        <div class="wrapper-content">
+        <div class="wrapper--content">
         <h2>Monsieur BoiBoi</h2>
         <p>Oui je suis monsieur boiboi</p>
     </div>
     </section>
 </body>
+<script>
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+});
+</script>
 </html>
