@@ -1,56 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="locomotive-scroll.css">
-    <script src="https://cdn.jsdelivr.net/gh/locomotivemtl/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
-    <title>Monsieur BoiBoi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" href="img/pfp-transparent.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/locomotivemtl/locomotive-scroll/dist/locomotive-scroll.min.js"></script>    
+    <title>Monsieur BoiBoi portfolio</title>
 </head>
-<body data-scroll-container>
-    <section>
+<header>
+	    <label class="switch">
+            <input type="checkbox" id="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <label class="switch-dark">
+            <input type="checkbox" id="checkbox-darkmode">
+            <span class="sliderr round-dark"></span>
+          </label>
+ </header>
+<body data-scroll data-scroll-container id="body">
+
+
+    <section data-scroll-section id="about">
+        <div class="wrapper--content">
+        <h1 data-scroll data-scroll-speed="2" id="boiboi-txt">Monsieur BoiBoi</h1>
+        <p data-scroll data-scroll-speed="2" id="who">Qui suis-je ?</p>
+        <p data-scroll data-scroll-speed="2" id="desc">Je suis un passionné du développement web et de la cybersécurité. Je suis actuellement en formation informatique en France. Je suis également un grand fan de jeux vidéos et de manga.</p>
+        
+    </div>
+    <div class="wrapper--img">
+        <img src="img/pfp-transparent.png" alt="img" style="width: 50%;">
+    </section>
+    <section data-scroll-section id="projects">
         <div class="wrapper--img">
-            <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="img">
+            <picture style="width: 70%; display: flex; flex-direction: column;">
+                <img src="https://github-readme-stats.vercel.app/api?username=Monsieur-BoiBoi&show_icons=true&theme=transparent" alt="img"/>
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Monsieur-BoiBoi&layout=compact&theme=transparent" alt="img">
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=Monsieur-BoiBoi&showuser=true&theme=transparent&repo=monsieur-boiboi.github.io" alt="img">
+                </picture>
         </div>
         <div class="wrapper--content">
-        <h2>Monsieur BoiBoi</h2>
-        <p>Oui je suis monsieur boiboi</p>
+        <h1 data-scroll data-scroll-speed="2" id="h1-prj">Mes projets</h1>
+        <p data-scroll data-scroll-speed="2" id="desc-prj">Je n'ai actuellement pas beaucoup de projets personnels, mais plutôt des projets scolaires(sites web, jeux...). <br>Je suis actuellement en train de faire plusieurs projets personnels, si vous voulez en savoir plus, je vous invite à voir mon Github !</p>
+        
     </div>
     </section>
-    <section>
-        <div class="wrapper--img">
-            <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="img">
-        </div>
+    
+
+    <!-- CONTACT -->
+
+    <section data-scroll-section id="contact">
         <div class="wrapper--content">
-        <h2>Monsieur BoiBoi</h2>
-        <p>Oui je suis monsieur boiboi</p>
-    </div>
-    </section>
-    <section>
-        <div class="wrapper--img">
-            <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="img">
+        <h1 data-scroll data-scroll-speed="4" data-scroll-direction="horizontal" id="contacts-txt">Contact</h1>
         </div>
-        <div class="wrapper--content">
-        <h2>Monsieur BoiBoi</h2>
-        <p>Oui je suis monsieur boiboi</p>
+        <div class="wrapper--content" id="social">
+        <div class="button" data-scroll data-scroll-speed="2" id="discord">
+            <div class="icon" data-scroll data-scroll-speed="2">
+               <i  class="fab fa-discord"></i>
+               <span data-scroll data-scroll-speed="2">Discord - <b> ElBoiBoi#8382 </b></span>
+            </div>
+            </div>
+            <a href="https://github.com/Monsieur-BoiBoi/" target="_blank" id="github">
+         <div class="button" data-scroll data-scroll-speed="2">
+            <div class="icon" data-scroll data-scroll-speed="2">
+               <i  class="fab fa-github"></i>
+               <span data-scroll data-scroll-speed="2" >Github - Monsieur-BoiBoi</span>
+            </div>
+         </div>
+        </a>
+            <div class="button" data-scroll data-scroll-speed="2" id="gmail">
+                <div class="icon" data-scroll data-scroll-speed="2">
+                <i  class="fas fa-envelope"></i>
+                <span data-scroll data-scroll-speed="2">Gmail - monsieurboiboipro@gmail.com</span>
+                </div>
+            </div>
+            <a href="https://twitter.com/MonsieurBoiBoi" target="_blank" id="twitter">
+            <div class="button" data-scroll data-scroll-speed="2">
+                <div class="icon" data-scroll data-scroll-speed="2">
+                <i  class="fab fa-twitter"></i>
+                <span data-scroll data-scroll-speed="2">Twitter - @monsieurboiboi</span>
+                </div>
+            </div>
+        </a>
     </div>
-    </section>
-    <section>
-        <div class="wrapper--img">
-            <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="img">
-        </div>
-        <div class="wrapper--content">
-        <h2>Monsieur BoiBoi</h2>
-        <p>Oui je suis monsieur boiboi</p>
-    </div>
+    
+    
+    <footer>
+        <p id="footer-txt">© 2022 Monsieur BoiBoi - Ce site est sous mon pseudonyme et ne contient aucune information personnelle, c'est un site créé uniquement pour m'exercer.</p>
+    </footer>
     </section>
 </body>
-<script>
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-});
-</script>
+<script src="main.js" defer></script>
+
 </html>

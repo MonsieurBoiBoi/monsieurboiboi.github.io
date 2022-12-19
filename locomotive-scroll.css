@@ -27,6 +27,7 @@ html.has-scroll-smooth {
   
   .c-scrollbar {
     position: absolute;
+    
     right: 0;
     top: 0;
     width: 11px;
@@ -51,7 +52,7 @@ html.has-scroll-smooth {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     opacity: 0.5;
     width: 7px;
     border-radius: 10px;

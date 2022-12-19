@@ -1,27 +1,346 @@
-html, body {
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+body.light {
+  color: black;
+  background-color: white;
+}
+
 section {
-    height: 100vh;
-    width: 100%;
-    display: flex;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+p{
+  text-align: center;
 }
 
 .wrapper--img, .wrapper--content {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper--img {
-    width: 60%;
-    height: auto;
+  width: 60%;
+  height: auto;
 }
 
 .wrapper--content {
-    align-items: start;
+  align-items: start;
+  
+}
+
+img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+#social{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+i{
+  font-size: 2rem;
+  margin: 1px;
+}
+span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*  button in center allways visible  at the top*/
+header {
+  position: fixed;
+  top: -25px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100px;
+}
+
+
+.button:not(#discord,#gmail) {
+  cursor: pointer;
+}
+
+
+
+.animated {
+  animation: appear 1s;
+}
+
+h1#contacts-txt {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+
+
+
+/* toogle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 2vh;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(50, 50, 50);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png");
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider::after {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  right: 4px;
+  bottom: 4px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* when check, show uk flag */
+
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png");
+  background-size: cover;
+  background-position: center;
+  
+}
+
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ---------------------------------------------- */
+
+.switch-dark {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 2vh;
+  margin-top: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch-dark input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.sliderr {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(50, 50, 50);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliderr::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: url("https://toppng.com/uploads/preview/half-moon-emoji-png-luna-llena-silueta-1156325136249buhtwwgu.png");
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliderr::after {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  right: 4px;
+  bottom: 4px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* when check, show uk flag */
+
+
+
+input:checked + .sliderr:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background: url("https://cdn.emojidex.com/emoji/seal/white_sun_with_rays.png?1422536271");
+  background-size: cover;
+  background-position: center;
+  
+}
+
+input:checked + .sliderr {
+  background-color: yellow;
+}
+
+input:focus + .sliderr {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/* Rounded sliders */
+.sliderr.round-dark {
+  border-radius: 34px;
+  
+}
+
+.sliderr.round-dark:before {
+  border-radius: 50%;
+}
+
+/* ---------------------------------------------- */
+
+#boiboi-txt {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+#who {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+#desc, #see-more {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 10px;
+  align-self: center;
+}
+
+#see-more {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#desc-prj {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 10px;
+  align-self: center;
+  margin-right: 10vh;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-bottom: -2%;
+}
+
+.dark-mode {
+  background-color: white;
+  color: white;
 }
