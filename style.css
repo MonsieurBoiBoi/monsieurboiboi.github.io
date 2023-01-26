@@ -114,14 +114,17 @@ header {
 }
 
 h1#contacts-txt {
-  font-size: 8rem;
+  font-size: 10em;
   font-weight: 700;
   margin-bottom: 10px;
   align-self: center;
 }
 
-
-
+@media (max-width: 600px) {
+  h1#contacts-txt {
+    font-size: 250%;
+    margin-right: 10%; 
+  }
 
 /* toogle switch */
 .switch {
